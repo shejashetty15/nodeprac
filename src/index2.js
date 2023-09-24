@@ -27,8 +27,7 @@ app.get("/",(req,res)=>{
 
 app.get('/about',(req,res)=>{
     requests(
-        `https://api.openweathermap.org/data/2.5/weather?q=${req.query.name}&units=metric&appid=f1ece578158b47a64485aab318ccbf89
-        `)
+       )
         .on("data", (chunk) => {
             const objdata= JSON.parse(chunk);
             const arrData=[objdata];
